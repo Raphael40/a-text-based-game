@@ -4,6 +4,11 @@ class Player
   end
 
   def look_around
-    @location
+    result = @location[:description]
+    @location[:items].each do |item|
+      result + item
+    end
+
+    puts result
   end
 end
