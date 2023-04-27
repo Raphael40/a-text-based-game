@@ -3,7 +3,8 @@ class Player
     @location = location
   end
 
-  def look_around
+  def look_around 
+    # lets you look around and see your surroundings
     return '' if @location.empty?
 
     item = @location[:items]
@@ -19,7 +20,8 @@ class Player
     return location_items
   end
 
-  def pick_up(item)
+  def pick_up(item) 
+    # removes an item from your location
     @location[:items].delete(item)
   end
 
